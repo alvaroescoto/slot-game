@@ -1,10 +1,10 @@
 module.exports = {
-  preset: "ts-jest",
-  testEnvironment: "jsdom", // ✅ Use jsdom to support DOM APIs like document
-  testMatch: ["**/tests/**/*.test.ts"],
-  globals: {
-    "ts-jest": {
-      tsconfig: "tsconfig.jest.json"
-    }
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom', // ✅ Required for DOM usage
+  testMatch: ['**/tests/**/*.test.ts'],
+  transform: {
+    '^.+\\.ts$': ['ts-jest', {
+      tsconfig: 'tsconfig.jest.json' // ✅ TS config only for tests
+    }]
   }
 };
