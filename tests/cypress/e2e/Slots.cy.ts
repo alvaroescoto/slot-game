@@ -19,9 +19,14 @@ describe("Slot Game UI Test Suite", () => {
   });
 
   it("should show win animation container (if exposed)", () => {
-    cy.get("canvas");
     slotPage.clickCanvas();
 
-    cy.get(".win-animation, canvas").should("exist");
+    slotPage.winAnimationExists().then((exists) => {
+      if (exists) {
+        slotPage.getWinAnimation().should("be.visible");
+      } else {
+        cy.log("No win this time – win animation not shown.");
+      }
+    });
   });
 });

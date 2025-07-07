@@ -1,6 +1,6 @@
 const SELECTORS = {
   canvas: "canvas",
-  winIndicator: "#win-indicator",
+  winIndicator: "#win-indicator"
 };
 
 export class SlotPage {
@@ -17,6 +17,18 @@ export class SlotPage {
   }
 
   spyOnConsoleLog() {
-    return cy.window().then((win) => cy.spy(win.console, "log").as("consoleLog"));
+    return cy
+      .window()
+      .then((win) => cy.spy(win.console, "log").as("consoleLog"));
+  }
+
+  getWinAnimation() {
+    return cy.get(".win-animation");
+  }
+
+  winAnimationExists() {
+    return cy
+      .get("body")
+      .then(($body) => $body.find(".win-animation").length > 0);
   }
 }
