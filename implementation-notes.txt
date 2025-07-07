@@ -1,24 +1,47 @@
-IMPLEMENTATION SUMMARY
+## IMPLEMENTATION SUMMARY
 
-Features Completed:
+Features Completed
 - All TODOs implemented
 - Reels now spin horizontally with smooth logic
 - Sound player built using howler.js
-- Win logic triggers with 30% chance
+- Win logic triggers with 30 percent chance
 
-Code Quality:
+Code Quality
 - Refactored into clean, modular TypeScript
-- Used OOP design, structured game logic in separate classes
+- Used object-oriented design, structured game logic in separate classes
 
-Testing:
+Testing
 - Unit tests for Reel and SlotMachine using Jest
-- Cypress E2E tests for canvas rendering, spin trigger, win indication
-- Page Object Model used in Cypress for better maintainability
+- Cypress end-to-end tests for canvas rendering, spin trigger, and win indication
+- Page Object Model used in Cypress tests for better maintainability
 
-CI:
+Continuous Integration
 - GitHub Actions CI configured
-- Runs tests automatically on push to main
+- Tests run automatically on each push to the main branch
 
-Extras:
+Additional Details
 - Spine win animation integrated and conditionally shown
 - Game canvas renders with PIXI.js
+
+Test Automation Approach
+
+To demonstrate test automation skills and provide broad coverage, the project includes both unit and end-to-end (E2E) tests.
+
+Frameworks used:
+- Jest for unit testing
+- Cypress for end-to-end testing
+
+Unit tests target internal logic such as reel spinning and slot machine state handling.
+End-to-end tests simulate user behavior including triggering spins, verifying canvas rendering, and checking for win conditions.
+
+Test structure:
+- Organized into tests/Unit and tests/cypress/e2e
+- Page Object Model applied in Cypress tests for maintainability, reusability and scalability
+
+CI Integration:
+- GitHub Actions runs all tests automatically on each commit to main
+
+How to run tests locally:
+npm install         # Install dependencies
+npm test            # Run Jest unit tests
+npx cypress open    # Launch Cypress test runner
