@@ -49,4 +49,28 @@ Your submission will be evaluated on the following criteria:
 - Aim for clean, efficient, and well-documented code.
 - Do not hesitate to ask questions if any part of the test is unclear.
 
-Good luck, and happy coding!
+---
+
+## ✅ My Implementation Notes
+
+### ✅ Features Completed
+- All `TODO`s implemented
+- Reels spin **horizontally**
+- Win logic with `30%` probability
+- Sound player implemented using `howler.js`
+
+### ✅ Code Quality
+- Code is modular and structured using OOP
+- Used TypeScript consistently
+- Applied minor refactoring and clean naming
+
+### ✅ Testing
+- Unit tests for core logic with Jest
+- E2E tests with Cypress (including POM)
+- GitHub Actions CI set up for automated test runs
+
+### ✅ Extras
+- Game canvas rendered with `PIXI.js`
+- Win animation handled with `pixi-spine`
+- CI runs on every `push` to `main` branch
+

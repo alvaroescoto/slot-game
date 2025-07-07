@@ -136,7 +136,7 @@ export class SlotMachine {
   }
 
   private checkWin(): void {
-    const randomWin = true;
+    const randomWin = Math.random() < 0.3;
 
     if (randomWin) {
       sound.play("win");
